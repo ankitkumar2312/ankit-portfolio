@@ -190,8 +190,11 @@ margin:10px 0;
 }
 
 .hero-right h2{
-color:#38bdf8;
-height:40px;
+    color:#38bdf8;
+    font-size:48px;
+    min-height:120px;
+    line-height:1.2;
+    overflow:hidden;
 }
 
 .description{
