@@ -11,3 +11,37 @@ function typeWriter() {
 }
 
 window.onload = typeWriter;
+const counters = document.querySelectorAll(".counter");
+
+const animateCounters = () => {
+    counters.forEach(counter => {
+        const target = +counter.dataset.target;
+        let current = 0;
+        const increment = Math.max(1, Math.ceil(target / 100));
+
+        const update = () => {
+            current += increment;
+
+            if (current >= target) {
+                current = target;
+
+                if (target === 99) {
+                    counter.textContent = target + "%";
+                } else if (target === 15) {
+                    counter.textContent = target + "+";
+                } else {
+                    counter.textContent = target + "+";
+                }
+
+                return;
+            }
+
+            counter.textContent = current;
+            requestAnimationFrame(update);
+        };
+
+        update();
+    });
+};
+
+window.addEventListener("load", animateCounters);
