@@ -470,16 +470,16 @@ font-size:45px;
     position:fixed;
     inset:0;
     overflow:hidden;
-    z-index:-2;
+    z-index:9999;
     pointer-events:none;
 }
 
 .particle{
     position:absolute;
-    width:6px;
-    height:6px;
+    width:12px;
+    height:12px;
     border-radius:50%;
-    background:#38bdf8;
+    background:red;
     opacity:.25;
     animation:floatParticle linear infinite;
 }
