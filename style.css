@@ -77,14 +77,14 @@ nav a:hover{
 }
 
 .hero{
-    height:90vh;
+    min-height:90vh;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    text-align:center;
-    padding:20px;
+    gap:60px;
+    padding:60px 8%;
+    flex-wrap:wrap;
 }
-
 .hero h1{
     font-size:2rem;
 }
