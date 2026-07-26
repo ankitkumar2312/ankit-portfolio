@@ -380,3 +380,27 @@ font-size:45px;
 .timeline-content li{
     margin-bottom:8px;
 }
+.light-mode{
+    background:#f5f7fb;
+    color:#111827;
+}
+
+.light-mode header,
+.light-mode nav{
+    background:rgba(255,255,255,0.9);
+}
+
+.light-mode .card{
+    background:white;
+    color:#111827;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3{
+    color:#111827;
+}
+
+.light-mode p{
+    color:#444;
+}
