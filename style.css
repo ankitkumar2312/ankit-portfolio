@@ -210,9 +210,15 @@ object-fit:cover;
 border:5px solid #38bdf8;
 box-shadow:0 0 30px rgba(56,189,248,.5);
 }
-
+.hero-left{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 .hero-right{
-max-width:600px;
+    flex:1;
+    max-width:650px;
 }
 
 .hero-right h1{
@@ -526,6 +532,11 @@ opacity:0;
     text-align:center;
     transition:all .35s ease;
     box-shadow:0 10px 25px rgba(0,0,0,.25);
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .stat-card h3{
