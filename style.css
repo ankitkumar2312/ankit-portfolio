@@ -403,3 +403,66 @@ font-size:45px;
 .light-mode p{
     color:#444;
 }
+.dna-background{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.dna{
+    position:absolute;
+    width:6px;
+    height:220px;
+    border-radius:20px;
+    background:linear-gradient(#38bdf8,#2563eb,#38bdf8);
+    opacity:.15;
+    animation:floatDNA 8s ease-in-out infinite;
+    box-shadow:0 0 25px #38bdf8;
+}
+
+.dna::before,
+.dna::after{
+    content:"";
+    position:absolute;
+    left:-10px;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#38bdf8;
+}
+
+.dna::before{
+    top:20px;
+}
+
+.dna::after{
+    bottom:20px;
+}
+
+.dna1{
+    left:8%;
+    top:15%;
+}
+
+.dna2{
+    right:12%;
+    top:35%;
+    animation-delay:2s;
+}
+
+.dna3{
+    left:70%;
+    top:70%;
+    animation-delay:4s;
+}
+
+@keyframes floatDNA{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-30px) rotate(12deg);
+    }
+}
