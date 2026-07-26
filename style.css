@@ -483,8 +483,8 @@ font-size:45px;
     border-radius:50%;
     background:red;
     opacity:1;
+    animation: floatParticle 10s linear infinite;
 }
-
 @keyframes floatParticle{
 
 0%{
