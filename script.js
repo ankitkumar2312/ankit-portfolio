@@ -69,3 +69,45 @@ for (let i = 0; i < 35; i++) {
     p.style.animationDelay = Math.random() * 5 + "s";
     particles.appendChild(p);
 }
+const roles = [
+    "Clinical Data Management Associate",
+    "EDC Professional",
+    "Data Validation Specialist",
+    "Clinical Research Professional"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+function typeEffect(){
+
+    const element = document.getElementById("typing");
+
+    if(!element) return;
+
+    if(typing){
+
+        element.textContent = roles[roleIndex].substring(0,charIndex++);
+        if(charIndex>roles[roleIndex].length){
+            typing=false;
+            setTimeout(typeEffect,1500);
+            return;
+        }
+
+    }else{
+
+        element.textContent = roles[roleIndex].substring(0,charIndex--);
+
+        if(charIndex<0){
+            typing=true;
+            roleIndex=(roleIndex+1)%roles.length;
+        }
+
+    }
+
+    setTimeout(typeEffect,80);
+
+}
+
+typeEffect();
